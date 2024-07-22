@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ktln01</string>
+    <string name="text_message">Hello Android 15!</string>
+    <string name="et_hint">Enter your name</string>
+    <string name="btn_send_text">Send</string>
+    <string name="view_offers">View Offers</string>
+</resources>
