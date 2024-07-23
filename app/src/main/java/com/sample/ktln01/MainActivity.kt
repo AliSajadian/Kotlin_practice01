@@ -2,6 +2,7 @@ package com.sample.ktln01
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Button
@@ -16,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.i("tag_log", "MainActivity_Create")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -54,5 +56,35 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("USER", enteredName)
             startActivity(intent)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("tag_log", "MainActivity_Start")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("tag_log", "MainActivity_Resume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("tag_log", "MainActivity_Pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("tag_log", "MainActivity_Stop")
+    }
+
+    override fun onRestart() {
+        Log.i("tag_log", "MainActivity_restart")
+        super.onRestart()
+    }
+
+    override fun onDestroy() {
+        Log.i("tag_log", "MainActivity_destroy")
+        super.onDestroy()
     }
 }
